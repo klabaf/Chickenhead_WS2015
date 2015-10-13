@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Chickenhead.iml" filepath="$PROJECT_DIR$/Chickenhead.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chickenhead_WS2015.iml" filepath="$PROJECT_DIR$/Chickenhead_WS2015.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

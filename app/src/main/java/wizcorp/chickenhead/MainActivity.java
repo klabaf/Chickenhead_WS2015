@@ -29,11 +29,13 @@ public class MainActivity extends AppCompatActivity {
         seek_Bar1.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
                     int progress_Value;
+                    double progress_Winkel;
 
                     @Override
                     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                         progress_Value = progress;
-                        text_View1.setText("Winkel: " + progress + " / " + seek_Bar1.getMax());
+                        progress_Winkel = progress * 1.8;
+                        text_View1.setText("Winkel: " + progress_Winkel + " / " + seek_Bar1.getMax());
                         Toast.makeText(MainActivity.this, "SeekBar in progress changed", Toast.LENGTH_LONG).show();
                     }
 
@@ -64,11 +66,13 @@ public class MainActivity extends AppCompatActivity {
         seek_Bar2.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
                     int progress_Value1;
+                    double progress_Winkel1;
 
                     @Override
                     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                         progress_Value1 = progress;
-                        text_View2.setText("Winkel: " + progress + " / " + seek_Bar2.getMax());
+                        progress_Winkel1 = progress * 1.8;
+                        text_View2.setText("Winkel: " + progress_Winkel1 + " / " + seek_Bar2.getMax());
                         Toast.makeText(MainActivity.this, "SeekBar2 in progress changed", Toast.LENGTH_LONG).show();
                     }
 
