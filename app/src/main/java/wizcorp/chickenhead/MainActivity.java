@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
                     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                         progress_Value = progress;
                         text_View1.setText("Winkel: " + progress + " / " + seek_Bar1.getMax());
-                        Toast.makeText(MainActivity.this, "SeekBar in progress", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "SeekBar in progress changed", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onStartTrackingTouch(SeekBar seekBar) {
-                        Toast.makeText(MainActivity.this, "SeekBar in progress", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "SeekBar touched", Toast.LENGTH_LONG).show();
 
                     }
 
@@ -51,12 +51,14 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
+
         );
+
     }
 
-    public void seekBar2() {
-        seek_Bar2 = (SeekBar) findViewById(R.id.seekBar);
-        text_View2 = (TextView) findViewById(R.id.textView);
+    public void seekBar2 () {
+        seek_Bar2 = (SeekBar) findViewById(R.id.seekBar2);
+        text_View2 = (TextView) findViewById(R.id.textView2);
         text_View2.setText("Winkel: " + seek_Bar2.getProgress() + " / " + seek_Bar2.getMax());
 
         seek_Bar2.setOnSeekBarChangeListener(
@@ -67,12 +69,12 @@ public class MainActivity extends AppCompatActivity {
                     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                         progress_Value1 = progress;
                         text_View2.setText("Winkel: " + progress + " / " + seek_Bar2.getMax());
-                        Toast.makeText(MainActivity.this, "SeekBar in progress", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "SeekBar2 in progress changed", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
                     public void onStartTrackingTouch(SeekBar seekBar) {
-                        Toast.makeText(MainActivity.this, "SeekBar in progress", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "SeekBar2 touched", Toast.LENGTH_LONG).show();
 
                     }
 
@@ -80,10 +82,14 @@ public class MainActivity extends AppCompatActivity {
                     public void onStopTrackingTouch(SeekBar seekBar) {
                         text_View2.setText("Winkel: " + progress_Value1 + " / " + seek_Bar2.getMax());
                         Toast.makeText(MainActivity.this, "SeekBar in StopTracking", Toast.LENGTH_LONG).show();
+
                     }
                 }
 
+
+
         );
+
     }
 
 
